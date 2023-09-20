@@ -1,6 +1,199 @@
 /******* Change Box Model ***************/
-*,
-*:before,
-*:after {
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
   box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
+
+
+/* Define all links to black by default  */
+a{
+  color: black;
+}
+
+
+header{
+display: flex;
+backdrop-filter: blur(10px);
+align-items: center;
+justify-content: space-between;
+width: 100%;
+padding: 20px 20px;
+position: absolute;
+z-index: 1;
+}
+
+.siteName a{
+color: black;
+font-size: 20px;
+color: white;
+}
+.account-icon{
+  font-size: 30px;
+  color: white;
+}
+
+/* Navigation  */
+
+.toggle{
+ color: white;
+ font-size: 30px;
+}
+
+nav{
+  display: none;
+}
+
+nav ul{
+  width:100%;
+  background: rgba(0, 0, 0, 0.895);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 64px;
+  right: 0;
+}
+
+nav ul li{
+  color: rgb(255, 255, 255);
+  display: block;
+  list-style: none;
+  padding: 20px 0px;
+  color: white;
+  text-align: center;
+}
+
+/* end */
+
+
+
+/* Hero  */
+
+.hero-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 70px;
+  height: 550px;
+  background: url("../images/site/audi.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay{
+  background: rgb(134,212,255);
+  background: -moz-linear-gradient(0deg, rgba(134,212,255,0) 0%, rgba(0,0,0,0.8996192226890756) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(134,212,255,0) 0%, rgba(0,0,0,0.8996192226890756) 100%);
+  background: linear-gradient(0deg, rgba(134,212,255,0) 0%, rgba(0,0,0,0.8996192226890756) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#86d4ff",endColorstr="#000000",GradientType=1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+}
+
+
+.content{
+  margin-top: 2rem;
+  position: relative;
+}
+
+
+.content h1{
+  text-align: center;
+  color: white;
+  font-size: 28px;
+}
+
+.content p{
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+ .hero-button{
+  background-color: rgba(0, 0, 0, 0.548);
+  position: relative;
+  height: 50px;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px white solid;
+  display: block;
+  margin: 20px auto 5rem auto;
+  padding: 8px 20px;
+  color: white;
+  font-size: 15px;
+}
+
+.hero-button:hover{
+ background-color: #c03333;
+}
+
+
+.specifications-section{
+  padding: 20px 30px;
+}
+
+.specifications-section h2{
+  margin-bottom: 1rem;
+  font-size: 25px;
+  text-align: center;
+  color: #c03333;
+}
+
+.specifications-section ul{
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+img{
+  width: 100%;
+}
+
+.upgradres-container{
+  padding: 30px 30px;
+}
+
+.upgradres-container h2{
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(37, 37, 37);
+}
+
+.upgradres{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.upgradres div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.upgradres .icon{
+  font-size: 80px;
+  color:#c03333;
+}
+
+.upgradres div a{
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
