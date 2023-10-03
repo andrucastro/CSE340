@@ -1,0 +1,149 @@
+@media screen and (min-width: 800px) {
+
+    .toggle-container{
+        display: none;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    nav{
+        display: block;
+        
+      }
+    
+    header{
+        flex-direction: row-reverse;
+    }
+
+      nav ul{ 
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        background-color: transparent;
+        top: 0;
+        margin-left: -2.5rem;
+      }
+
+  
+      nav ul li{
+        padding: 5px 25px;
+      }
+      nav ul li:hover{
+        background-color: rgb(194, 194, 194);
+        border-radius: 10px;
+        color: black;
+      }
+   
+      /* fix the position of the sedan option  */
+    
+
+      /* change the order of the items in the header   */
+      header :nth-child(1){
+        order: 3;
+      }
+      header :nth-child(2){
+        order: 1;
+      }
+      header :nth-child(3){
+        order: 2;
+      }
+
+      .hero-container{
+        justify-content:flex-start;
+        height: 850px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .content{
+        position: relative;
+        margin-top: 4rem;
+        margin-bottom: 20px;
+      }
+
+
+      .overlay{
+        background: rgb(0,0,0);
+        background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 19%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 19%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 19%, rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+      }
+
+       .hero-button{
+        width: 10%;
+      }
+
+      .audi-performace{
+        display: inline;
+        width: 50%;
+      }
+      
+      .side-by-side{
+        display: flex;
+        margin-top: 3rem;
+      }
+
+      .side-by-side section{
+        width: 100%;
+      }
+
+      .side-by-side h2{
+        margin-bottom: 30px;
+        font-size: 2.3rem;
+        text-align: center;
+      }
+
+      .specifications-section{
+        padding: 0;
+      }
+
+      .audi-performace li{
+        font-size: 20px;
+        line-height: 3rem;
+      }
+
+      .audi-performace ul{
+        margin-left: 60px;
+      }
+
+      .upgradres-container{
+        padding: 0;
+        position: relative;
+      }
+
+      .upgradres{
+        width: 100%;
+        position: absolute;
+        top: 30%
+      }
+
+      .upgradres div{
+        margin-bottom: 30%;
+      }
+
+      .upgradres .icon{
+        font-size: 100px;;
+      }
+
+      .upgradres .icon:hover{
+        background-color: brown;
+        color: white;
+        padding: 30px;
+        border-radius: 100%;
+        transition-duration: 0.5s;
+      }
+
+      footer{
+        margin-top: -5px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+      }
+      
+  }
