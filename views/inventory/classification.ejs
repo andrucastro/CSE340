@@ -1,0 +1,12 @@
+<div class="menuBackground">
+    
+</div>
+<% if (title) { %>
+<h1 class="mainHeading"><%= title %></h1>
+<% } else {
+    res.redirect('/')
+} %>
+
+<%# messages() %>
+<%- grid %>
+<script src="/js/responsiveMenu.js"> </script>

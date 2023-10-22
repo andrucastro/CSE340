@@ -24,4 +24,65 @@ Util.getNav = async function (req, res, next) {
   return list
 }
 
+/* **************************************
+* Build the classification view HTML
+* ************************************ */
+Util.buildClassificationGrid = async function(data){
+  let grid
+  if(data.length > 0){
+    grid = '<ul id="inv-display">'
+    data.forEach(vehicle => { 
+      grid += '<li class="carCard">'
+      grid +=  '<a href="../../inv/detail/'+ vehicle.inv_id 
+      + '" title="View ' + vehicle.inv_make + ' '+ vehicle.inv_model 
+      + 'details"><img src="' + vehicle.inv_thumbnail 
+      +'" alt="Image of '+ vehicle.inv_make + ' ' + vehicle.inv_model 
+      +' on CSE Motors" /></a>'
+      grid += '<div class="namePrice">'
+      grid += '<h2>'
+      grid += '<a href="../../inv/detail/' + vehicle.inv_id +'" title="View ' 
+      + vehicle.inv_make + ' ' + vehicle.inv_model + ' details">' 
+      + vehicle.inv_make + ' ' + vehicle.inv_model + '</a>'
+      grid += '</h2>'
+      grid += '<span>$' 
+      + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</span>'
+      grid += '</div>'
+      grid += '</li>'
+    })
+    grid += '</ul>'
+  } else { 
+    grid += '<p class="notice">Sorry, no matching vehicles could be found.</p>'
+  }
+  return grid
+}
+
+/* ****************************************
+ * Middleware For Handling Errors
+ * Wrap other function in this for 
+ * General Error Handling
+ **************************************** */
+Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next)
+
+Util.buildCarDisplay  = async function(data) {
+  let display;
+
+  display = '<section>'
+  display += '<div>'
+  display += '<h3 class="carTitle">' + data.inv_year + '</h3>'
+  display += '<img src=' + data.inv_image 
+  +' alt="' + data.inv_make + ' ' + data.inv_model 
+  +' on CSE Motors" />'
+  display += '</div>'
+  display += '<div class="CarDetails">'
+  let formattedprice =  Number(data.inv_price).toLocaleString("en-US")
+  display += '<p class="price">Price: $' + formattedprice + '</p>'
+  let formattedMiles = data.inv_miles.toLocaleString("en-US")
+  display += '<p class="miles">Miles: ' + formattedMiles  + '</p>'
+  display += '<p class="color">Color: ' + data.inv_color  + '</p>'
+  display += '</div>'
+  display += '</section>'
+  display += '<p class ="description"> Description: ' + data.inv_description + '</p>'
+  return display
+}
+
 module.exports = Util

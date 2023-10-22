@@ -1,11 +1,19 @@
 @media screen and (min-width: 800px) {
 
+    .siteName a{
+      font-size: 25px;
+    }
+
     .toggle-container{
         display: none;
     }
 
     .toggle{
         display: none;
+    }
+
+    .account-icon{
+      font-size: 40px;
     }
 
     nav{
@@ -15,9 +23,10 @@
     
     header{
         flex-direction: row-reverse;
+        backdrop-filter: none;
     }
 
-      nav ul{ 
+      nav .menu{ 
         position: relative;
         display: flex;
         justify-content: space-around;
@@ -30,11 +39,19 @@
       nav ul li{
         padding: 5px 25px;
       }
-      nav ul li:hover{
-        background-color: rgb(194, 194, 194);
-        border-radius: 10px;
-        color: black;
+      
+      nav ul li a{
+        letter-spacing: 1px;
+        font-size: 22px;
+        font-weight: 300;
       }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+        border-radius: 10px;
+      }
+
+      
    
       /* fix the position of the sedan option  */
     
@@ -61,6 +78,10 @@
         position: relative;
         margin-top: 4rem;
         margin-bottom: 20px;
+      }
+
+      .content h1{
+        font-size: 35px;
       }
 
 
@@ -145,5 +166,25 @@
         position: relative;
         z-index: 3;
       }
+
+      /* Classification ID Page */
+
+      .mainHeading{
+        font-size: 4rem;
+        margin-bottom: 5rem;
+      }
+
+      #inv-display{
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #inv-display li{
+        width: 23.5%;
+        margin-right: 20px;
+      }
       
+
+
+
   }
