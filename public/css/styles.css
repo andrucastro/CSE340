@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
---var
+
 
 *{
   box-sizing: border-box;
@@ -209,6 +209,12 @@ footer{
   padding: 20px 10px;
 }
 
+footer a{
+  color: white;
+  text-decoration: underline;
+  display: block;
+  margin-top: 10px;
+}
 
 /* Classification ID Page */
 
@@ -254,19 +260,15 @@ padding: 15px;
 
 /*Single Car Page*/
 
-:root {
-  --padding: 20px;
-
-}
 
 .carTitle{
  text-align: center;
  font-size: 25px;
- margin-top: -20px;
  margin-bottom: 30px;
 }
 
-.CarDetails{
+.carTitle{
+  font-size: 30px;
 }
 
 
@@ -274,6 +276,9 @@ padding: 15px;
   font-size: 30px;
   font-weight: 400;
   padding: 0px var(--padding);
+  background-color: #c03333;
+  color: white;
+  padding: 10px 20px;
   
 }
 
@@ -281,13 +286,23 @@ padding: 15px;
   font-size: 20px;
   font-weight: 400;
   padding: 0px var(--padding);
+  font-weight: 600;
+  padding: 10px 20px;
+  
 }
 
 .color{
-  background-color: #484848;
-  color:white;
-  padding: 10px;
-  padding: 0px var(--padding);
+  background-color: #dfdfdf;
+  color:rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.description{
+  padding: 20px 30px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 

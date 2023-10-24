@@ -26,6 +26,7 @@ app.set("layout", "./layouts/layout")
 
 app.get("/", utilities.handleErrors(baseController.buildHome))
 app.use("/inv", inventoryRoute)
+app.use(require('./routes/errRoute'))
 app.use(static)
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {

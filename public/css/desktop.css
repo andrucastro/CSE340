@@ -159,8 +159,8 @@
 
       footer{
         margin-top: -5px;
-        height: 150px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         position: relative;
@@ -184,6 +184,44 @@
         margin-right: 20px;
       }
       
+
+      /*Single Car Page*/
+
+      .carBlock{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+       }
+       
+       .carPicture{
+        width: 100%;
+       }
+
+      .CarDetails{
+        
+      }
+
+
+      .price{
+        font-size: 30px;
+        font-weight: 400;
+        padding: 0px var(--padding);
+        background-color: #c03333;
+        color: white;
+        padding: 10px 20px;
+        
+      }
+
+
+      .color{
+        padding:20px;
+      }
+
+      .description{
+        padding: 20px 30px;
+        font-size: 20px;
+        line-height: 40px;
+      }
 
 
 

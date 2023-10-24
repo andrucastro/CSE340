@@ -66,22 +66,23 @@ Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)
 Util.buildCarDisplay  = async function(data) {
   let display;
 
-  display = '<section>'
+  display = '<section class="carBlock">'
   display += '<div>'
-  display += '<h3 class="carTitle">' + data.inv_year + '</h3>'
-  display += '<img src=' + data.inv_image 
+  display += '<img class="carPicture" src=' + data.inv_image 
   +' alt="' + data.inv_make + ' ' + data.inv_model 
   +' on CSE Motors" />'
   display += '</div>'
   display += '<div class="CarDetails">'
+  display += '<h3 class="carTitle">' + data.inv_year + '</h3>'
   let formattedprice =  Number(data.inv_price).toLocaleString("en-US")
   display += '<p class="price">Price: $' + formattedprice + '</p>'
   let formattedMiles = data.inv_miles.toLocaleString("en-US")
   display += '<p class="miles">Miles: ' + formattedMiles  + '</p>'
   display += '<p class="color">Color: ' + data.inv_color  + '</p>'
+  display += '<p class ="description"> Description: ' + data.inv_description + '</p>'
   display += '</div>'
   display += '</section>'
-  display += '<p class ="description"> Description: ' + data.inv_description + '</p>'
+  
   return display
 }
 
