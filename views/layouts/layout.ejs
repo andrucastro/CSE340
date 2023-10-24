@@ -10,7 +10,28 @@
 
         <%- include('../partials/footer') -%>
     </div>
-    <script src="js/responsiveMenu.js"></script>
+    <script>
+        console.log("hello")
+
+const nav = document.querySelector('nav')
+const toggle = document.querySelector('.toggle')
+const logo = document.querySelector('.siteName a')
+let isOpen = false
+
+toggle.addEventListener('click', ()=>{
+
+    if(!isOpen){
+        nav.style.display = "block";
+        isOpen = true;
+        logo.style.marginLeft = "-90px"
+    }else{
+        nav.style.display = "none"
+        logo.style.marginLeft = "0px"
+        isOpen = false;
+    }
+
+})
+    </script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 </html>
