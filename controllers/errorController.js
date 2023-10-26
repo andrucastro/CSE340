@@ -5,7 +5,7 @@ errorCont.throw500 = async (req, res, next) =>{
         throw new Error("505")
 
     }catch(error){
-        next({status: 505, message: 'Server Error.'})
+        next({status: 505})
     }
 }
 
