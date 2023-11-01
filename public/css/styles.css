@@ -1,7 +1,6 @@
 /******* Change Box Model ***************/
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 *{
@@ -9,7 +8,7 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Manrope', sans-serif
 }
 
 
@@ -304,6 +303,87 @@ padding: 15px;
   font-size: 20px;
   line-height: 40px;
 }
+
+/* LOGIN  */
+
+#form-container{
+ display: flex;
+ justify-content: center;
+}
+
+#login-form{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+#login-form label, #login-form input{
+  display: block;
+  width: 100%;
+}
+
+#login-form label{
+  color: rgb(78, 78, 78);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#login-form input{
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #eeeeee;
+  border: #d4d4d4 1px solid;
+}
+
+#login-form button{
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 0px;
+  background-color: #c03333;
+  color: white;
+  border: none;
+}
+
+#login-form button:hover{
+  border:#c03333 solid 1px;
+  background-color: white;
+  color: #c03333;
+}
+
+#login-form p{
+  text-align: center;
+  
+}
+
+#login-form p a{
+  color: #c03333;
+  text-decoration: underline;
+}
+
+#login-background{
+  background: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.login-mainHeading{
+  padding-top: 50px;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 800;
+  text-shadow: 2px 0px 7px rgb(255, 255, 255);
+
+}
+
+
 
 
 

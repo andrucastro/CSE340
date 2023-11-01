@@ -86,4 +86,6 @@ Util.buildCarDisplay  = async function(data) {
   return display
 }
 
+// Util.buildLogin = async function
+
 module.exports = Util

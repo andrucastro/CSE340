@@ -170,6 +170,7 @@
       /* Classification ID Page */
 
       .mainHeading{
+        margin-top: 50px;
         font-size: 4rem;
         margin-bottom: 5rem;
       }
@@ -223,6 +224,18 @@
         line-height: 40px;
       }
 
+      #login-form{
+        width: 30%;
+        box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+        -webkit-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+        -moz-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+      }
 
+      #login-form button{
+        width: 60%;
+        display: block;
+        margin: 30px auto;
+        border-radius: 10px;
+      }
 
   }
