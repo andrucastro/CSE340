@@ -198,10 +198,6 @@
         width: 100%;
        }
 
-      .CarDetails{
-        
-      }
-
 
       .price{
         font-size: 30px;
@@ -236,6 +232,10 @@
         display: block;
         margin: 30px auto;
         border-radius: 10px;
+      }
+
+      .login-mainHeading{
+        font-size: 4rem;  
       }
 
   }
