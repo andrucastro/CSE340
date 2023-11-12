@@ -395,15 +395,15 @@ padding: 15px;
 }
 
 
-input:required:invalid, input:focus:invalid {
+/* input:required:invalid, input:focus:invalid {
   border-radius: 2px solid #c03333;
-  background-color: #c03333;
- }
-
+  background-color: rgba(255, 111, 111, 0.483);
+ } */
+/* 
  input:required:valid {
-  /* insert your own styles for valid form input */
+
   opacity: 0.4;
- }
+ } */
 
   /* server validation errors */
  .notice li{
@@ -412,6 +412,76 @@ input:required:invalid, input:focus:invalid {
   margin-top: 10px;
  }
 
+
+ /* ADMIN PAGE   */
+ .management-btn{
+  width: 20%;
+  margin: 0px auto;
+  background-color: #c03333;
+  display: block;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+ }
+
+ /* ADD ClASSIFICATION  */
+#addClassification{
+  width: 100%;
+  margin: 0px auto;
+  display: block;
+  background-color: rgb(235, 235, 235);
+  padding: 20px 30px;
+}
+
+#addClassification label{
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+#addClassification input{
+margin-top: 5px;
+margin-bottom: 20px;
+font-size: 15px;
+padding: 5px 10px;
+  
+}
+
+#addClassification #btn-addClassification{
+background-color: #c03333;
+padding: 10px 20px;
+border: none;
+color: white;
+}
+
+/* ADD INVENTORY PAGE  */
+
+#addInventory{
+  width: 100%;
+  padding: 20px 30px;
+}
+
+#addInventory label{
+ display: block;
+ margin-top: 10px;
+ font-size: 18px;
+ margin-bottom: 3px;
+}
+
+#addInventory input{
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+ }
+
+  #btn-addinvenotry{
+  background-color: #c03333;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  }
 
 
 

@@ -238,4 +238,27 @@
         font-size: 4rem;  
       }
 
+       /* ADD ClASSIFICATION  */
+      #addClassification{
+        width: 40%;
+        margin: 0px auto;
+        display: block;
+        background-color: rgb(235, 235, 235);
+        padding: 20px 30px;
+        box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+        -webkit-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+        -moz-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+      }
+
+      #addInventory{
+        margin: 0px auto;
+        width: 60%;
+        padding: 20px 30px;
+        background-color: rgb(235, 235, 235);
+        box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+        -webkit-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+        -moz-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+      }
+      
+
   }
