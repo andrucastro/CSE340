@@ -112,10 +112,12 @@ validate.classificationRules = () => {
     errors = validationResult(req)
     if (!errors.isEmpty()) {
       let nav = await utilities.getNav()
+      let select = await utilities.buildClassificationList()
       res.render("inventory/addInventory", {
         errors,
         title: "Add New Car",
         nav,
+        select,
         classification_id,
         inv_make,
         inv_model,
