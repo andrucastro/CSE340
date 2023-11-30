@@ -408,8 +408,12 @@ padding: 15px;
   /* server validation errors */
  .notice li{
   list-style: none;
-  color: #c03333;
-  margin-top: 10px;
+  text-align: center;
+  color: #ffffff;
+  margin: 10px 0px;
+  background-color: #c03333;
+  padding: 10px 20px;
+
  }
 
 
@@ -424,6 +428,36 @@ padding: 15px;
   margin-bottom: 20px;
   text-align: center;
  }
+
+ .manageInventory{
+  width: 50%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+ }
+
+ .manageInventory h2{
+  margin-bottom: 20px;
+ }
+
+ .manageInventory select{
+  width: 50%;
+  margin: 20px auto;
+  font-size: 18px;
+ }
+
+ #inventoryDisplay{
+  text-align: left;
+ }
+
+ #inventoryDisplay a{
+  color: #c03333;
+  text-decoration: underline;
+ }
+
+
 
  /* ADD ClASSIFICATION  */
 #addClassification{
