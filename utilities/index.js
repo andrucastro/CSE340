@@ -92,7 +92,7 @@ Util. buildClassificationList = async function(classification_id = null) {
   let data = await invModel.getClassifications();
   let classificationList = `
     <select name="classification_id" id="classificationList">
-      <option value="">Choose a Classification</option>
+      <option value="<%= locals.inv_classification_id %>">Choose a Classification</option>
       ${data.rows.map(row => `
         <option value="${row.classification_id}" ${classification_id !== null && row.classification_id === classification_id ? "selected" : ""}>
           ${row.classification_name}

@@ -1,5 +1,3 @@
-console.log("hello")
-
 const nav = document.querySelector('nav')
 const toggle = document.querySelector('.toggle')
 const logo = document.querySelector('.siteName a')

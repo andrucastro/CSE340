@@ -20,7 +20,7 @@ a{
 
 header{
 display: flex;
-backdrop-filter: blur(10px);
+background-color: black;
 align-items: center;
 justify-content: space-between;
 width: 100%;
@@ -31,7 +31,7 @@ z-index: 1;
 
 .siteName a{
 color: black;
-font-size: 20px;
+font-size: 15px;
 color: white;
 }
 .account-icon{
@@ -75,6 +75,17 @@ nav ul li a{
   list-style: none;
   color: white;
   text-align: center;
+}
+
+.userLogged{
+  color: white;
+  font-size: 20px;
+}
+
+.userLogged a{
+  color: white;
+  font-size: 14px;
+ 
 }
 
 /* end */
@@ -309,6 +320,7 @@ padding: 15px;
 #form-container{
  display: flex;
  justify-content: center;
+ flex-direction: column;
 }
 
 #login-form{
@@ -318,20 +330,27 @@ padding: 15px;
   flex-direction: column;
   background-color: white;
 }
+#password-form{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
 
-#login-form label, #login-form input{
+#login-form label, #login-form input, #password-form label, #password-form input{
   display: block;
   width: 100%;
 }
 
-#login-form label{
+#login-form label, #password-form label{
   color: rgb(78, 78, 78);
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
-#login-form input{
+#login-form input , #password-form input{
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 10px;
@@ -340,7 +359,7 @@ padding: 15px;
   border: #d4d4d4 1px solid;
 }
 
-#login-form button{
+#login-form button , #password-form button{
   width: 100%;
   margin-top: 20px;
   font-size: 18px;
@@ -351,18 +370,18 @@ padding: 15px;
   border: none;
 }
 
-#login-form button:hover{
+#login-form button:hover , #password-form button:hover{
   border:#c03333 solid 1px;
   background-color: white;
   color: #c03333;
 }
 
-#login-form p{
+#login-form p, #password-form p{
   text-align: center;
   
 }
 
-#login-form p a{
+#login-form p a , #password-form p a{
   color: #c03333;
   text-decoration: underline;
 }
@@ -382,14 +401,14 @@ padding: 15px;
   text-shadow: 2px 0px 7px rgb(255, 255, 255);
 }
 
-#login-form  .password-rules{
+#login-form  .password-rules, #password-form .password-rules{
   color: #5a5a5a;
   text-align: left;
   font-size: 14px;
 }
 
 
-#login-form button{
+#login-form button , #password-form button{
   width: 100%;
   margin: 30px auto;
 }
@@ -419,7 +438,7 @@ padding: 15px;
 
  /* ADMIN PAGE   */
  .management-btn{
-  width: 20%;
+  width: 80%;
   margin: 0px auto;
   background-color: #c03333;
   display: block;
@@ -493,6 +512,10 @@ color: white;
 #addInventory{
   width: 100%;
   padding: 20px 30px;
+  background-color: rgb(235, 235, 235);
+  box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+  -webkit-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
+  -moz-box-shadow: 1px 3px 19px -4px rgba(0,0,0,0.43);
 }
 
 #addInventory label{
@@ -515,6 +538,29 @@ color: white;
   padding: 10px 20px;
   border: none;
   color: white;
+  }
+
+  /* Account  */
+  .account-container{
+    display: block;
+    margin: 0px auto;
+    width: 80%;
+  }
+
+  .account-container h2{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .account-container p{
+    font-size: 20px;
+  }
+
+  .account-container a{
+    color: #c03333;
+    font-size: 20px;
+    text-decoration: underline;
   }
 
 
