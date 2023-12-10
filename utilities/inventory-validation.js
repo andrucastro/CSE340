@@ -112,7 +112,7 @@ validate.classificationRules = () => {
     errors = validationResult(req)
     if (!errors.isEmpty()) {
       let nav = await utilities.getNav()
-      let select = await utilities.buildClassificationList()
+      let select = await utilities.buildClassificationList(classification_id)
       res.render("inventory/addInventory", {
         errors,
         title: "Add New Car",
@@ -144,12 +144,13 @@ validate.checkUpdateData = async (req, res, next) => {
   errors = validationResult(req)
   if (!errors.isEmpty()) {
     let nav = await utilities.getNav()
-    let select = await utilities.buildClassificationList()
+    let classification = parseInt(classification_id)
+    let dropDown = await utilities.buildClassificationList(classification)
     res.render("inventory/editInventory", {
       errors,
       title: "Edit" + inv_make + " " + inv_model,
       nav,
-      select,
+      select:dropDown,
       classification_id,
       inv_make,
       inv_model,

@@ -165,9 +165,10 @@ invCont.buildEditInventory = async function(req, res, next){
 invCont.editInventoryView = async function(req, res, next){
   const inv_id = parseInt(req.params.inv_id)
   let nav = await utilities.getNav();
-  let dropDown = await utilities.buildClassificationList();
   const carInfo = await invModel.getCarByInvId(inv_id)
   const itemData = carInfo[0]
+  console.log(itemData.classification_id)
+  let dropDown = await utilities.buildClassificationList(itemData.classification_id);
   const itemName = `${itemData.inv_make} ${itemData.inv_model}`
   res.render('inventory/editInventory',{
     title: "Edit " + itemName,
@@ -193,6 +194,7 @@ invCont.editInventoryView = async function(req, res, next){
  * ************************** */
 invCont.updateInventory = async function (req, res, next) {
   let nav = await utilities.getNav()
+  let classifications = await invModel.getClassifications()
   const {
     inv_id,
     inv_make,
@@ -219,7 +221,6 @@ invCont.updateInventory = async function (req, res, next) {
     inv_color,
     classification_id
   )
-
   if (updateResult) {
     const itemName = updateResult.inv_make + " " + updateResult.inv_model
     req.flash("notice", `The ${itemName} was successfully updated.`)
